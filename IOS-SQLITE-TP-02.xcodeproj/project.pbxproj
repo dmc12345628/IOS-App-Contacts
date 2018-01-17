@@ -15,6 +15,9 @@
 		23645828200F3E600023F541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23645826200F3E600023F541 /* LaunchScreen.storyboard */; };
 		23645833200F3E600023F541 /* IOS_SQLITE_TP_02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23645832200F3E600023F541 /* IOS_SQLITE_TP_02Tests.m */; };
 		2364583E200F3E600023F541 /* IOS_SQLITE_TP_02UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364583D200F3E600023F541 /* IOS_SQLITE_TP_02UITests.m */; };
+		2364585A200F49D20023F541 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 23645859200F49D20023F541 /* libsqlite3.tbd */; };
+		2364585D200F49ED0023F541 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364585C200F49ED0023F541 /* DBManager.m */; };
+		23645860200F5D780023F541 /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364585F200F5D780023F541 /* EditInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		23645839200F3E600023F541 /* IOS-SQLITE-TP-02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS-SQLITE-TP-02UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2364583D200F3E600023F541 /* IOS_SQLITE_TP_02UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOS_SQLITE_TP_02UITests.m; sourceTree = "<group>"; };
 		2364583F200F3E600023F541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23645859200F49D20023F541 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2364585B200F49ED0023F541 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		2364585C200F49ED0023F541 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		2364585E200F5D780023F541 /* EditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
+		2364585F200F5D780023F541 /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2364585A200F49D20023F541 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,7 @@
 				23645831200F3E600023F541 /* IOS-SQLITE-TP-02Tests */,
 				2364583C200F3E600023F541 /* IOS-SQLITE-TP-02UITests */,
 				23645816200F3E600023F541 /* Products */,
+				23645858200F49D20023F541 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +120,10 @@
 				23645826200F3E600023F541 /* LaunchScreen.storyboard */,
 				23645829200F3E600023F541 /* Info.plist */,
 				23645818200F3E600023F541 /* Supporting Files */,
+				2364585B200F49ED0023F541 /* DBManager.h */,
+				2364585C200F49ED0023F541 /* DBManager.m */,
+				2364585E200F5D780023F541 /* EditInfoViewController.h */,
+				2364585F200F5D780023F541 /* EditInfoViewController.m */,
 			);
 			path = "IOS-SQLITE-TP-02";
 			sourceTree = "<group>";
@@ -138,6 +152,14 @@
 				2364583F200F3E600023F541 /* Info.plist */,
 			);
 			path = "IOS-SQLITE-TP-02UITests";
+			sourceTree = "<group>";
+		};
+		23645858200F49D20023F541 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23645859200F49D20023F541 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23645860200F5D780023F541 /* EditInfoViewController.m in Sources */,
 				23645820200F3E600023F541 /* ViewController.m in Sources */,
 				2364581D200F3E600023F541 /* AppDelegate.m in Sources */,
 				2364581A200F3E600023F541 /* main.m in Sources */,
+				2364585D200F49ED0023F541 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
