@@ -7,15 +7,32 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBManager.h"
 
-@interface EditInfoViewController : UIViewController
+@protocol EditInfoViewControllerDelegate
+
+- (void) editingInfoWasFinished;
+
+@end
+
+@interface EditInfoViewController : UIViewController<UITextFieldDelegate>
 
 // outlets
 @property (weak, nonatomic) IBOutlet UITextField *txtFirstname;
-@property (weak, nonatomic) IBOutlet UITextField *txtLasname;
+@property (weak, nonatomic) IBOutlet UITextField *txtLastname;
 @property (weak, nonatomic) IBOutlet UITextField *txtAge;
+
+@property (nonatomic, readonly, strong) DBManager *dbManager;
+
+@property (nonatomic, strong) id<EditInfoViewControllerDelegate> delegate;
 
 // methods
 - (IBAction)saveInfo:(id)sender;
+
+@end
+
+@interface EditInfoViewController()
+
+@property (nonatomic, readwrite, strong) DBManager *dbManager;
 
 @end

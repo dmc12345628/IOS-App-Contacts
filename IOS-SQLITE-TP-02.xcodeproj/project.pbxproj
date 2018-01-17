@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233C468F200FA9BF00F44EC4 /* sampledb.db in Resources */ = {isa = PBXBuildFile; fileRef = 233C468E200FA9BF00F44EC4 /* sampledb.db */; };
 		2364581A200F3E600023F541 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23645819200F3E600023F541 /* main.m */; };
 		2364581D200F3E600023F541 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364581C200F3E600023F541 /* AppDelegate.m */; };
 		23645820200F3E600023F541 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364581F200F3E600023F541 /* ViewController.m */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		233C468E200FA9BF00F44EC4 /* sampledb.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = sampledb.db; sourceTree = "<group>"; };
 		23645815200F3E600023F541 /* IOS-SQLITE-TP-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-SQLITE-TP-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23645819200F3E600023F541 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2364581B200F3E600023F541 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		23645817200F3E600023F541 /* IOS-SQLITE-TP-02 */ = {
 			isa = PBXGroup;
 			children = (
+				233C468E200FA9BF00F44EC4 /* sampledb.db */,
 				2364581B200F3E600023F541 /* AppDelegate.h */,
 				2364581C200F3E600023F541 /* AppDelegate.m */,
 				2364581E200F3E600023F541 /* ViewController.h */,
@@ -271,6 +274,7 @@
 				23645828200F3E600023F541 /* LaunchScreen.storyboard in Resources */,
 				23645825200F3E600023F541 /* Assets.xcassets in Resources */,
 				23645823200F3E600023F541 /* Main.storyboard in Resources */,
+				233C468F200FA9BF00F44EC4 /* sampledb.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +535,7 @@
 				23645844200F3E600023F541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23645845200F3E600023F541 /* Build configuration list for PBXNativeTarget "IOS-SQLITE-TP-02Tests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +544,7 @@
 				23645847200F3E600023F541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23645848200F3E600023F541 /* Build configuration list for PBXNativeTarget "IOS-SQLITE-TP-02UITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +553,7 @@
 				2364584A200F3E600023F541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

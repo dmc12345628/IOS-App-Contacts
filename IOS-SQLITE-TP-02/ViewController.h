@@ -7,11 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBManager.h"
+#import "EditInfoViewController.h"
 
-@interface ViewController : UITableViewController
+@interface ViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, EditInfoViewControllerDelegate>
+
+// properties
+@property (nonatomic, strong) DBManager *dbManager;
+@property (nonatomic, strong) NSArray *arrPeopleInfo;
 
 @property (strong, nonatomic) IBOutlet UITableView *tblPeople;
+
+// actions
 - (IBAction)addNewRecord:(id)sender;
+
+// methods
+-(void)loadData;
 
 @end
 

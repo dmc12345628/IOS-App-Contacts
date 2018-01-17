@@ -13,7 +13,6 @@
 - (instancetype) initWithDatabaseFilename:(NSString *)dbFilename {
     self = [super init];
     if (self) {
-        NSString *docsDir;
         NSArray *dirPaths;
         
         // Get the documents directory
@@ -23,28 +22,6 @@
         _databaseName = dbFilename;
         
         [self copyDatabaseIntoDocumentDirectory];
-        
-        /*
-        NSFileManager *filemgr = [NSFileManager defaultManager];
-        
-        if ([filemgr fileExistsAtPath: _databasePath] == NO) {
-            const char *dbpath = [_databasePath UTF8String];
-            
-            if (sqlite3_open(dbpath, &_contactDB) == SQLITE_OK) {
-                char *errMsg;
-                const char *sql_stmt = "CREATE TABLE IF NOT EXISTS contacts (\
-                id INTEGER PRIMARY KEY AUTOINCREMENT, \
-                name TEXT, \
-                address TEXT, \
-                phone TEXT)";
-                if (sqlite3_exec(_contactDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) {
-                    //_lblStatus.text = @"Failed to create table";
-                }
-                sqlite3_close(_contactDB);
-            } //else
-            //lblStatus.text = @"Failed to open/create table";
-        }*/
-
     }
     return self;
 }
@@ -101,6 +78,11 @@
                         
                         if (dbDataAsChars != NULL) {
                             [arrDataRow addObject:[NSString stringWithUTF8String:dbDataAsChars]];
+                        }
+                        
+                        if (self.arrColumnNames.count != totalColumns) {
+                            dbDataAsChars = (char *) sqlite3_column_name(compiledStatement, i);
+                            [self.arrColumnNames addObject:[NSString stringWithUTF8String:dbDataAsChars]];
                         }
                     }
                     
